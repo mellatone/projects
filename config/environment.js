@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'projects',
     environment: environment,
+    firebase: 'https://mellatone-projects.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -16,7 +17,20 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    sassOptions: {
+      includePaths: ['bower_components/materialize/sass']
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "*",
+      'font-src': "'self'",
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
+    },
+
   };
 
   if (environment === 'development') {

@@ -1,0 +1,14 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+      	{{input value=controller.newProject class="validate" placeholder="New project name"}}
+      </div>
+			<div class="input-field col s6">
+      	<button class="waves-effect waves-light btn" {{action "createProject" controller.newProject}}>Create</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{{outlet}}

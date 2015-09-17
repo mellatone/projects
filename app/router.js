@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('projects', {path: '/'}, function() {
+    this.route('archived');
+    this.route('loading');
+  });
 });
 
 export default Router;
