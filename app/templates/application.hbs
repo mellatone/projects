@@ -1,3 +1,24 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="mdi-notification-folder-special">Mes projets</i> </a>
+      <ul class="right hide-on-med-and-down">
+        <li>{{#link-to 'projects.index'}}Active{{/link-to}}</li>
+        <li>{{#link-to 'projects.archived'}}Archived{{/link-to}}</li>
+      </ul>
 
+      <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+        <li>{{#link-to 'projects.index'}}Active{{/link-to}}</li>
+        <li>{{#link-to 'projects.archived'}}Archived{{/link-to}}</li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<div class="container">
+	<h2 id="title" class="header teal-text"></h2>
 {{outlet}}
+
+</div>
+
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}
+
